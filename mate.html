@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+                margin: 0;
+                padding: 0;
+            }
+            a{
+                font-size: 14px;
+                color: whitesmoke;
+                text-decoration: none;
+            }
+            body{
+                min-width: 1500px;
+                background: url("libarary.jpg") no-repeat  0 0/cover;
+                opacity: 1;
+                font-weight: bold;
+            }
+            .head{
+                position: relative;
+                width: 100%;
+                height: 106px;
+                background: url("sky.jpg") no-repeat;
+            }
+            .head div.part{
+                position: absolute;
+                top: 0;
+                left: 1300px;
+                height: 30px;
+                width: 200px;
+            }
+            .head div.part a{
+                margin-left: 5px;
+                float: left;
+                height: 100%;
+            }
+            .head div.part div.son{
+                position: absolute;
+                left: 0;
+                top: 100%;
+                height: 180px;
+                width: 100%;
+                z-index: 100;
+                display: none;
+            }
+            .head div.part a.a1:hover~div.son{
+                display: block;
+                background: url("wxewm.png") center/cover;
+            }
+            .head div.part a.a2:hover~div.son{
+
+                display: block;
+                background: url("qqewm.png") no-repeat;
+            }
+            .head div.part a.a3:hover~div.son{
+                display: block;
+                background: url("dyewm.png") center/cover;
+            }
+            ul.ul1{
+                padding-left: 60px;
+                background-color: rgba(209, 33, 33, 0.993);
+                width: 100%;
+                height: 40px;
+                margin: 0;
+                font-size: 16px;
+                line-height: 40px;
+            }
+            ul.ul1 li{
+                position: relative;
+                float: left;
+                list-style: none;
+            }
+            ul.ul1 li a{
+                display: block;
+                width: 250px;
+                text-align: center;
+            }
+            ul.ul1 li a:hover{
+                background-color: black;
+                text-decoration: none;
+                opacity: 0.2;
+            }
+            div.content{
+                position: relative;
+                margin-left: 120px;
+                width: 1300px;
+                height: 800px;
+                margin-top: 50px;
+            }
+            div.content h1{
+                margin-top: 10px;
+                margin-left: 5px;
+                margin-bottom: 50px;
+            }
+            div.content img.i1{
+                float: left;
+                width: 100px;
+                height: 100px;
+            }
+            div.content ul li{
+                list-style: none;
+                height: 250px;
+                width: 1000px;
+                margin-left: 10px;
+                margin-bottom: 50px;
+                transition: .5s;
+            }
+            div.content ul li img{
+                float: left;
+                width: 200px;
+                height: 250px;
+            }
+            div.content ul li h3{
+                margin-bottom: 40px;
+                margin-left: 20px;
+            }
+            div.content ul li p{
+                line-height: 30px;
+            }
+            div.content ul li:hover{
+                transform: translateY(-20px);
+                transition: .5s;
+            }
+            div.content ul li:nth-child(1):hover{
+                transform: translateY(-20px);
+                transition: .5s;
+            }
+            div.content ul li:nth-child(2):hover{
+                transform: translateY(-20px);
+                transition: .5s;
+            }
+            div.content ul li:nth-child(3):hover{
+                transform: translateY(-20px);
+                transition: .5s;
+                background-color: rgba(255, 255, 255, 0.699);
+            }
+            div.content ul li:nth-child(4):hover{
+                transform: translateY(-20px);
+                transition: .5s;
+            }
+            div.content ul li:nth-child(5):hover{
+                transform: translateY(-20px);
+                transition: .5s;
+            }
+    </style>
+</head>
+<body>
+    <div class="head">
+            <a href="https://www.ncwu.edu.cn/index.htm"><img src="logo_03.jpg" alt=""></a>
+           <div class="part">
+            <a class="a1" href=""><img src="weixin.png" alt=""> </a>
+            <a class="a2" href=""><img src="qq.png" alt=""> </a>
+            <a class="a3" href=""><img src="douyin.png" alt=""></a>
+            <a href="https://www.ncwu.edu.cn/index.htm">华水主页</a>
+            <div class="son"></div>
+           </div>
+        </div>
+        <ul class="ul1" style="font-size: 16px;">
+            <li><a href="index.html">主页</a> </li>
+            <li><a href="introduce.html">学校介绍</a> </li>
+            <li><a href="inform.html">通知公告</a> </li>
+            <li><a href="process.html" >办学历程</a> </li>
+            <li><a href="mate.html" style="background-color: black;text-decoration: none;opacity: 0.2;">优秀校友</a> </li>
+        </ul>
+        <div class="content">
+            <img class="i1" src="xiaoqing.png" alt=""><h1>优秀校友</h1>
+            <ul>
+                <li>
+                    <img src="cl.jpg" alt="">
+                    <h3>陈雷</h3>
+                    <p>陈雷，男，汉族，1954年6月生，北京人，1980年5月加入中国共产党，1971年9月参加工作，本科毕业于东北工学院，研究生毕业于华北水利水电学院北京研究生部农田水利工程专业，研究生学历，工学硕士，教授级高级工程师。 [1] 
+                        现任十三届全国政协农业和农村委员会副主任。
+                    </p>
+                </li>
+                <li style="margin-left: 100px;">
+                    <img src="lcx.jpg" alt="">
+                    <h3>刘慈欣</h3>
+                    <p>刘慈欣，1963年6月出生于北京，祖籍河南省信阳市罗山，山西阳泉人 [62]  ，本科学历，高级工程师， [1]  科幻作家，中国作家协会会员、第九届、第十届全委会委员， [2]  [72]  中国科普作家协会会员，山西省作家协会副主席 [3-4]  ，阳泉市作家协会副主席，同时也是中国科幻小说代表作家之一。
+                    </p>
+                </li>
+                <li style="margin-left: 100px;">
+                    <img src="ejp.png" alt="">
+                    <h3>鄂竟平</h3>
+                    <p>鄂竟平，男，汉族，1956年1月生，河北乐亭人，1977年1月加入中国共产党，1973年2月参加工作，华北水利水电学院水工专业大学毕业，教授级高级工程师。
+                        现任全国政协人口资源环境委员会副主任。 
+                    </p>
+                </li>
+                <li style="margin-left: 100px;">
+                    <img src="mrp.jpg" alt="">
+                    <h3 style="margin-bottom: 20px;">孟瑞鹏</h3>
+                    <p>孟瑞鹏（1991年-2015年），男，汉族，1991年12月生，河南省濮阳市清丰县韩村乡孟焦夫村人 ，中共党员，生前系华北水利水电大学2012级法语专业学生。
+                        2015年2月26日，河南省濮阳市清丰县韩村乡西赵楼村文化广场三人落水，大学生孟瑞鹏为救两个落水的小女孩而不幸溺水死亡，但是事情发生后，落水儿童母亲称孟瑞鹏是自己落水，从而社会引发关注。
+                        2015年3月1日晚，清丰县发布通告，孟瑞鹏一事已确定其确为下水救人而溺亡。孟瑞鹏终于得到了迟来的正义。
+                        2015年4月孟瑞鹏同学被教育部追授为“全国优秀大学生”称号 [1]  。2015年6月， [2]  孟瑞鹏同学被共青团中央追授为“全国优秀共青团员”称号。2015年6月孟瑞鹏同学被评选为全国道德模范
+                    </p>
+                </li>
+                <li style="margin-left: 100px;">
+                    <img src="lgy.jpg" alt="">
+                    <h3>李国英</h3>
+                    <p>李国英，男，汉族，1963年12月生，河南禹州人，1984年7月参加工作，1988年8月加入中国共产党，在职研究生学历，理学博士学位，教授级高级工程师。
+                        现任中共十九届中央委员，水利部党组书记、部长。
+                    </p>
+                </li>
+            </ul>
+        </div>
+</body>
+</html>

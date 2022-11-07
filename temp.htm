@@ -1,0 +1,387 @@
+<HTML><HEAD>
+<META author="jhy"><LINK rel=stylesheet href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<STYLE>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            a{
+                font-size: 14px;
+                color: whitesmoke;
+                text-decoration: none;
+            }
+            body{
+                min-width: 1500px;
+            }
+            .head{
+                position: relative;
+                width: 100%;
+                height: 106px;
+                background: url("sky.jpg") no-repeat;
+            }
+            .head div.part{
+                position: absolute;
+                top: 0;
+                left: 1300px;
+                height: 30px;
+                width: 200px;
+            }
+            .head div.part a{
+                margin-left: 5px;
+                float: left;
+                height: 100%;
+            }
+            .head div.part div.son{
+                position: absolute;
+                left: 0;
+                top: 100%;
+                height: 180px;
+                width: 100%;
+                z-index: 100;
+                display: none;
+            }
+            .head div.part a.a1:hover~div.son{
+                display: block;
+                background: url("wxewm.png") center/cover;
+            }
+            .head div.part a.a2:hover~div.son{
+
+                display: block;
+                background: url("qqewm.png") no-repeat;
+            }
+            .head div.part a.a3:hover~div.son{
+                display: block;
+                background: url("dyewm.png") center/cover;
+            }
+            ul.ul1{
+                padding-left: 60px;
+                background-color: rgba(209, 33, 33, 0.993);
+                width: 100%;
+                height: 40px;
+                margin: 0;
+                font-size: 16px;
+                line-height: 40px;
+            }
+            ul.ul1 li{
+                position: relative;
+                float: left;
+                list-style: none;
+            }
+            ul.ul1 li a{
+                display: block;
+                width: 250px;
+                text-align: center;
+            }
+            ul.ul1 li a:hover{
+                background-color: black;
+                text-decoration: none;
+                opacity: 0.2;
+            }
+            ul.ul2{
+                z-index: 100;
+                position: fixed;
+                left: 0;
+                font-size: 16px;
+                border-radius: 10px;
+                margin-left: 50px;
+                margin-top: 100px;
+                width: 120px;
+                height: 180px;
+                background-color: white;
+                padding-left: 30px;
+                padding-top: 10px;
+                background-color: rgba(6, 127, 240, 0.664);
+            }
+            ul.ul2 li{
+                position: relative;
+                list-style: none;
+                text-align: left;
+                margin-bottom: 20px;
+                cursor: pointer;
+                transition: 0.2s;
+            }
+            ul.ul2 li a.a1{
+                text-decoration: none;
+                float: left;
+                width: 11px;
+                height: 17px;
+                background: url("13-1.png") 1px 81px;
+            }
+            ul.ul2 li:hover{
+                margin-left: 10px;
+                background-color: #EEEEEE;
+                transition: 0.2s;
+            }
+            ul.ul2 li a.a2{
+                position: absolute;
+                left: 100%;
+                right: 0;
+                width: 11px;
+                height: 17px;
+                background: url("13-1.png") 0px 118px;
+                transition: 0.2s;
+                opacity: 0;
+            }
+            ul.ul2 li:hover a.a2{
+                position: absolute;
+                left: 75px;
+                transition: 0.2s;
+                opacity: 1;
+            }
+            ul.ul2 li a.a3{
+                position: absolute;
+                left: 100%;
+                right: 0;
+                width: 11px;
+                height: 17px;
+                background: url("13-1.png") 0px 118px;
+                transition: 0.2s;
+                opacity: 0;
+            }
+            ul.ul2 li:hover a.a3{
+                position: absolute;
+                left: 42px;
+                transition: 0.2s;
+                opacity: 1;
+            }
+            .carousel-indicators {
+                    position: absolute; 
+                    bottom: 10px; 
+                      left: 50%;
+                  width: 60%;
+    padding-left: 0;
+    margin-left: -30%;
+    text-align: center;
+    list-style: none;
+}
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000 \9;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: #fff;
+}
+div.part1{
+     height: 300px;
+     width: 750px;
+     margin-left: 50px;
+     margin-top: 50px;
+}
+div.part1>img{
+    float: left;
+    vertical-align:top;
+}
+            form{
+                background: url("xiaohui.jpg") no-repeat center/cover;
+                width: 400px;
+                height: 400px;
+                border-radius: 15px;
+                border: 1px solid grey; 
+                padding-top: 40px;
+                padding-left: 25px;
+                transform: translateX(950px) translateY(-340px);
+            }
+            input{
+                height: 40px;
+                width: 290px;
+                border-radius: 5px;
+                border: 1px solid grey; 
+            }
+            form p{
+                margin-bottom: 20px;
+            }
+            div.content{
+                margin-left: 20px;
+                height: 450px;
+                width: 100%;
+                border-bottom: 2px solid rgb(216, 40, 16);
+            }
+            div.content img{
+                float: left;
+            }
+            div.inform{
+                 position: relative;
+                 width: 100%;
+                 height: 350px;
+                 border-bottom: 2px solid rgb(216, 40, 16);
+            }
+            div.inform div{
+                height: 400px;
+                width: 700px;
+                margin-left: 20px;
+            }
+            div.inform div.div2{
+                position: absolute;
+                top: 30px;
+                left: 700px;
+            }
+            div.inform div img{
+                float: left;
+            }
+            div.inform div a{
+                width: 700px;
+                height: 40px;
+                line-height: 40px;
+                display: block;
+                margin-left: 90px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                transition: 1s;
+            }
+            div.inform div a:active{
+                text-decoration: none;
+               
+            }
+            div.inform div a:hover{
+                text-decoration: none;
+                box-shadow: 10px 10px 5px #888888;
+                transition: 1s;
+            }
+            div.process{
+                 margin-left: 20px;
+                 position: relative;
+                 width: 100%;
+                 height: 350px;
+                 border-bottom: 2px solid rgb(216, 40, 16);
+                 overflow: hidden;
+                 word-break: break-all;
+                 text-overflow: ellipsis;   
+                 display: -webkit-box;
+                 -webkit-line-clamp: 2;
+                 -webkit-box-orient: vertical;
+            }
+            div.process img{
+                float: left;
+            }
+            div.process p.p1{
+                line-height: 30px;
+                width: 900px;
+                margin-left: 30px;
+            }
+            div.process p.p2{
+                background: url("lishi02.pg.jpg") no-repeat center/cover;
+                width: 400px;
+                height: 200px;
+                position: absolute;
+                top: 70px;
+                left: 960px;
+            }
+            div.mate{
+                 margin-left: 20px;
+                 position: relative;
+                 width: 100%;
+                 height: 350px;
+                 border-bottom: 2px solid rgb(216, 40, 16);
+            }
+            div.mate img{
+                float: left;
+            }
+            div.mate ul li{
+                float: left;
+                width: 200px;
+                height: 270px;
+                margin-left: 50px;
+            }
+            div.mate ul li img{
+                width: 200px;
+                height: 250px;
+            }
+            div.end{
+                margin-left: 20px;
+                position: relative;
+                width: 100%;
+                height: 180px;
+                background: rgb(216, 40, 16);
+            }
+            div.end ul{
+                position: absolute;
+                top: 40%;
+                left: 35%;
+            }
+            div.end ul li{
+                list-style: none;
+                color: white;
+                font-size: 16px;
+            }
+    </STYLE>
+
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV class=head><A href="https://www.ncwu.edu.cn/index.htm"><IMG alt="" src="logo_03.jpg"></A> 
+<DIV class=part><A class=a1 href=""><IMG alt="" src="weixin.png"> </A><A class=a2 href=""><IMG alt="" src="qq.png"> </A><A class=a3 href=""><IMG alt="" src="douyin.png"></A> <A href="https://www.ncwu.edu.cn/index.htm">华水主页</A> 
+<DIV class=son></DIV></DIV></DIV>
+<UL class=ul1 style="FONT-SIZE: 16px">
+<LI><A href="index.html">主页</A> </LI>
+<LI><A href="introduce.html">学校介绍</A> </LI>
+<LI><A href="inform.html">通知公告</A> </LI>
+<LI><A href="process.html">办学历程</A> </LI>
+<LI><A href="mate.html">优秀校友</A> </LI></UL>
+<UL class=ul2>
+<LI><A class=a1></A>学校介绍<A class=a2></A> 
+<LI><A class=a1></A>通知公告<A class=a2></A> 
+<LI><A class=a1></A>办学历程<A class=a2></A> 
+<LI><A class=a1></A>优秀校友<A class=a2></A> </LI></UL>
+<DIV id=slidershow class="carousel slide" data-ride="carousel"><!-- 设置图片轮播的顺�?-->
+<OL class=carousel-indicators>
+<LI class=active data-slide-to="0" data-target="#slidershow"></LI>
+<LI data-slide-to="1" data-target="#slidershow"></LI>
+<LI data-slide-to="2" data-target="#slidershow"></LI></OL><!-- 设置轮播图片 -->
+<DIV class=carousel-inner>
+<DIV class="item active"><A href="##"><IMG alt="" src="1.jpg"></A> <!-- 图片对应标题和描述内�?-->
+<DIV class=carousel-caption>
+<H3>华水生日快乐</H3>
+<P>恭迎华北水利水电大学建校70周年</P></DIV></DIV>
+<DIV class=item><A href="##"><IMG alt="" src="2.jpg"></A> <!-- 图片对应标题和描述内�?-->
+<DIV class=carousel-caption>
+<H3>美丽华水</H3>
+<P>华水风光</P></DIV></DIV>
+<DIV class=item><A href="##"><IMG style="HEIGHT: 500px; WIDTH: 1500px" alt="" src="3.jpg"></A> <!-- 图片对应标题和描述内�?-->
+<DIV class=carousel-caption>
+<H3>美丽华水</H3>
+<P>华水风光</P></DIV></DIV></DIV><!-- 设置轮播图片控制�?--><A role=button class="left carousel-control" href="#slidershow" data-slide="prev"><SPAN class="glyphicon glyphicon-chevron-left"></SPAN></A><A role=button class="right carousel-control" href="#slidershow" data-slide="next"><SPAN class="glyphicon glyphicon-chevron-right"></SPAN></A></DIV>
+<SCRIPT src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></SCRIPT>
+
+<SCRIPT src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></SCRIPT>
+
+<DIV class=content><IMG alt="" src="xiaoqing.png"><A style="TEXT-DECORATION: none; COLOR: black" href="introduce.html">
+<H2>学校介绍</H2></A>
+<DIV class=part1><IMG alt="" src="xiaohui.jpg" width=100 height=100> 
+<H3 style="MARGIN-TOP: 10px; MARGIN-LEFT: 10px; DISPLAY: block">华北水利水电大学</H3>
+<P>华北水利水电大学（North China University of Water Resources and Electric Power），简称“华水”，坐落于河南省郑州市，是水利部与河南省共建、以河南省管理为主的河南省特色骨干大学，是金砖国家网络大学中方高校牵头单位、金砖国家大学联盟成员，为国家首批硕士学位、博士学位授予权单位，入选教育部卓越工程师教育培养计划、中西部高校基础能力建设工程、硕士研究生单独招考资格、少数民族高层次骨干人才计划，水利部水务培训中心、水利部电大开放教育办公室设在学校�? 学校起源�?951年创建于北京的中央人民政府水利部水利学校�?954年更名为水利部北京水利学校�?958年北京水力发电学校、北京水力发电函授学院并入，成立北京水利水电学院�?969年迁至河北省磁县岳城水库办学�?971年更名为河北水利水电学院�?977年迁至河北省邯郸市办学，1978年更名为华北水利水电学院�?990年迁至河南省郑州市办学，2000年整建制由水利部划转河南省管理，2013年更名为华北水利水电大学�? 截至2021�?月，建有花园校区(占地面积555�?、龙子湖校区(占地面积1780�?，江淮校区（占地面积1500亩），设�?4个教学单位，�?5个本科专业，4个博士学位授权一级学科，38个硕士学位授权一级学科；有教职工2500余人，全日制在校�?2182人（含预�?3人），其中本科生29602人，全日制硕士博士研究生2393人�?/p&gt; </P></DIV>
+<FORM action="">
+<P>用户�?<INPUT name=name placeholder="请输入英文字母或数字"></P>
+<P style="MARGIN-LEFT: 16px">密码 <INPUT type=password placeholder="******"></P>
+<P style="MARGIN-LEFT: -14px">确认密码 <INPUT type=password placeholder="******"></P>
+<P style="MARGIN-LEFT: 10px">email <INPUT placeholder="123456789@qq.com"></P>
+<P style="MARGIN-LEFT: 18px">昵称 <INPUT style="HEIGHT: 30px; WIDTH: 80px; COLOR: white; MARGIN-LEFT: 50px; BACKGROUND-COLOR: #3c6cb1; MARGIN-RIGHT: 20px" value=注册 name=name placeholder="输入英文字母或者数�?></p>&#13;&#10;                 <input type=" button?> <INPUT style="HEIGHT: 30px; WIDTH: 140px; COLOR: white; BACKGROUND-COLOR: #3c6cb1" type=button value="我有账号，我要登�?>&#13;&#10;               </form>&#13;&#10;            </div>&#13;&#10;            <div class=" inform?> 
+<DIV><IMG alt="" src="xiaoqing.png"><A class=a1 style="TEXT-DECORATION: none; COLOR: black" href="">
+<H2>通知公告</H2></A><A style="FONT-SIZE: 18px; COLOR: black" href="">关于做好校庆期间氛围营造工作的通知</A> <A style="FONT-SIZE: 18px; COLOR: black" href="">华北水利水电大学建校70周年校庆主要活动安排</A> <A style="FONT-SIZE: 18px; COLOR: black" href="">关于召开校庆工作汇报会的通知</A> <A style="FONT-SIZE: 18px; COLOR: black" href="">关于召开校友会秘书长工作会议的通知</A> <A style="FONT-SIZE: 18px; COLOR: black" href="">关于做好学校形象宣传片拍摄工作的通知</A> </DIV>
+<DIV class=div2><A style="FONT-SIZE: 18px; COLOR: black" href="">70年校庆征稿启�?/a&gt; <A style="FONT-SIZE: 18px; COLOR: black" href="">关于召开校庆工作推进会的通知</A> <A style="FONT-SIZE: 18px; COLOR: black" href="">关于征集华北水利水电大学70周年校庆标识（LOGO）及宣传口号的通知</A> <A style="FONT-SIZE: 18px; COLOR: black" href="">关于70周年校庆专项捐赠项目征集的通知</A> <A style="FONT-SIZE: 18px; COLOR: black" href="">华北水利水电大学70周年校庆公告（第一号）</A> </DIV></DIV>
+<DIV class=process><IMG alt="" src="xiaoqing.png"><A style="TEXT-DECORATION: none; COLOR: black" href="">
+<H2>建校历程</H2></A>
+<P class=p1>北京时期 张子林院长受到毛泽东主席接见 张子林院长受到毛泽东主席接见 新中国成立初期，由当时的水利部部长傅作义�?951年主持创建了学校的前身—水利部北京水利学校�? 1951�?�?5日，中央人民政府水利部在北京创办的水利部水利学校正式开学，校址设在阜城门内巡捕厅十号（今民康胡同）�? 1953�?月，北京水利学校迁入北京市西郊花园村新建校舍(原华北水利水电学院北京研究生部所在地)�? 1954年，学校改名为北京水利学校�? 1958�?0�?日，北京水利学校与北京水利发电函授学院、北京水力发电学校合建北京水利水电学院，在北京市东郊定福庄举行成立大会。院长由北京水利水电科学研究院院长张子林兼任�?0�?日确定为校庆日�? 1958年起，先后接受越南、尼泊尔、印度尼西亚、喀麦隆等国留学生（1966年停止，2004年恢复）�? 1959�?�?3日，北京水利水电学院一部收归水利电力部直接领导，恢复北京水力发电学校�? 1960年，学校水利电力部委托负责援建越南水利水电学院�? 1963年，哈尔滨建筑工程学院（后更名哈尔滨建筑大学，已并入哈尔滨工业大学）河川枢纽及水电站建筑专业合并到该校，同年开始招收研究生�? 1966�?月，周恩来总理来河北地震地区视察，座谈时了解到华北缺乏水利人才，于是提出了将北京水利水电学院从北京迁至邯郸的建议�?�?0日，水利电力部致河北省委、省革委将北京水利水电学院迁往河北省邯郸市磁县岳城水库�?.. </P>
+<P class=p2></P></DIV>
+<DIV class=mate><IMG alt="" src="xiaoqing.png"><A style="TEXT-DECORATION: none; COLOR: black" href="">
+<H2>优秀校友</H2></A>
+<UL>
+<LI><IMG alt="" src="cl.jpg"><A style="TEXT-DECORATION: none; COLOR: black" href="">陈雷</A> </LI>
+<LI><IMG alt="" src="lcx.jpg"><A style="TEXT-DECORATION: none; COLOR: black" href="">刘慈�?/a&gt; </LI>
+<LI><IMG alt="" src="mrp.jpg"><A style="TEXT-DECORATION: none; COLOR: black" href="">孟瑞�?/a&gt; </LI>
+<LI><IMG alt="" src="ejp.png"><A style="TEXT-DECORATION: none; COLOR: black" href="">鄂竟�?/a&gt; </LI>
+<LI><IMG alt="" src="lgy.jpg"><A style="TEXT-DECORATION: none; COLOR: black" href="">李国�?/a&gt; </LI></UL></DIV>
+<DIV class=end><IMG alt="" src="symbol.png"> 
+<UL>
+<LI>网页作者：201917328靳和�?/li&gt; 
+<LI>花园校区地址：河南省郑州市北环路36�?邮编�?50045 
+<LI>龙子湖校区地址：河南省郑州市金水东�?36�?邮编�?50046 </LI></UL></DIV></A></FORM></BODY></HTML>

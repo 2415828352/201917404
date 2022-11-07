@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta author='jhy'>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            a{
+                font-size: 14px;
+                color: whitesmoke;
+                text-decoration: none;
+            }
+            body{
+                min-width: 1500px;
+            }
+            .head{
+                position: relative;
+                width: 100%;
+                height: 106px;
+                background: url("sky.jpg") no-repeat;
+            }
+            .head div.part{
+                position: absolute;
+                top: 0;
+                left: 1300px;
+                height: 30px;
+                width: 200px;
+            }
+            .head div.part a{
+                margin-left: 5px;
+                float: left;
+                height: 100%;
+            }
+            .head div.part div.son{
+                position: absolute;
+                left: 0;
+                top: 100%;
+                height: 180px;
+                width: 100%;
+                z-index: 100;
+                display: none;
+            }
+            .head div.part a.a1:hover~div.son{
+                display: block;
+                background: url("wxewm.png") center/cover;
+            }
+            .head div.part a.a2:hover~div.son{
+
+                display: block;
+                background: url("qqewm.png") no-repeat;
+            }
+            .head div.part a.a3:hover~div.son{
+                display: block;
+                background: url("dyewm.png") center/cover;
+            }
+            ul.ul1{
+                padding-left: 60px;
+                background-color: rgba(209, 33, 33, 0.993);
+                width: 100%;
+                height: 40px;
+                margin: 0;
+                font-size: 16px;
+                line-height: 40px;
+            }
+            ul.ul1 li{
+                position: relative;
+                float: left;
+                list-style: none;
+            }
+            ul.ul1 li a{
+                display: block;
+                width: 250px;
+                text-align: center;
+            }
+            ul.ul1 li a:hover{
+                background-color: black;
+                text-decoration: none;
+                opacity: 0.2;
+            }
+            ul.ul2{
+                z-index: 100;
+                position: fixed;
+                left: 0;
+                font-size: 16px;
+                border-radius: 10px;
+                margin-left: 50px;
+                margin-top: 100px;
+                width: 120px;
+                height: 180px;
+                background-color: white;
+                padding-left: 30px;
+                padding-top: 10px;
+                background-color: rgba(6, 127, 240, 0.664);
+            }
+            ul.ul2 li{
+                position: relative;
+                list-style: none;
+                text-align: left;
+                margin-bottom: 20px;
+                cursor: pointer;
+                transition: 0.2s;
+            }
+            ul.ul2 li a.a1{
+                text-decoration: none;
+                float: left;
+                width: 11px;
+                height: 17px;
+                background: url("13-1.png") 1px 81px;
+            }
+            ul.ul2 li:hover{
+                margin-left: 10px;
+                background-color: #EEEEEE;
+                transition: 0.2s;
+            }
+            ul.ul2 li a.a2{
+                position: absolute;
+                left: 100%;
+                right: 0;
+                width: 11px;
+                height: 17px;
+                background: url("13-1.png") 0px 118px;
+                transition: 0.2s;
+                opacity: 0;
+            }
+            ul.ul2 li:hover a.a2{
+                position: absolute;
+                left: 75px;
+                transition: 0.2s;
+                opacity: 1;
+            }
+            ul.ul2 li a.a3{
+                position: absolute;
+                left: 100%;
+                right: 0;
+                width: 11px;
+                height: 17px;
+                background: url("13-1.png") 0px 118px;
+                transition: 0.2s;
+                opacity: 0;
+            }
+            ul.ul2 li:hover a.a3{
+                position: absolute;
+                left: 42px;
+                transition: 0.2s;
+                opacity: 1;
+            }
+            .carousel-indicators {
+                    position: absolute; 
+                    bottom: 10px; 
+                      left: 50%;
+                  width: 60%;
+    padding-left: 0;
+    margin-left: -30%;
+    text-align: center;
+    list-style: none;
+}
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000 \9;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: #fff;
+}
+div.part1{
+     height: 300px;
+     width: 750px;
+     margin-left: 50px;
+     margin-top: 50px;
+}
+div.part1>img{
+    float: left;
+    vertical-align:top;
+}
+            form{
+                background: url("xiaohui.jpg") no-repeat center/cover;
+                width: 400px;
+                height: 400px;
+                border-radius: 15px;
+                border: 1px solid grey; 
+                padding-top: 40px;
+                padding-left: 25px;
+                transform: translateX(950px) translateY(-340px);
+            }
+            input{
+                height: 40px;
+                width: 290px;
+                border-radius: 5px;
+                border: 1px solid grey; 
+            }
+            form p{
+                margin-bottom: 20px;
+            }
+            div.content{
+                margin-left: 20px;
+                height: 450px;
+                width: 100%;
+                border-bottom: 2px solid rgb(216, 40, 16);
+            }
+            div.content img{
+                float: left;
+            }
+            div.inform{
+                 position: relative;
+                 width: 100%;
+                 height: 350px;
+                 border-bottom: 2px solid rgb(216, 40, 16);
+            }
+            div.inform div{
+                height: 400px;
+                width: 700px;
+                margin-left: 20px;
+            }
+            div.inform div.div2{
+                position: absolute;
+                top: 30px;
+                left: 700px;
+            }
+            div.inform div img{
+                float: left;
+            }
+            div.inform div a{
+                width: 700px;
+                height: 40px;
+                line-height: 40px;
+                display: block;
+                margin-left: 90px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                transition: 1s;
+            }
+            div.inform div a:active{
+                text-decoration: none;
+               
+            }
+            div.inform div a:hover{
+                text-decoration: none;
+                box-shadow: 10px 10px 5px #888888;
+                transition: 1s;
+            }
+            div.process{
+                 margin-left: 20px;
+                 position: relative;
+                 width: 100%;
+                 height: 350px;
+                 border-bottom: 2px solid rgb(216, 40, 16);
+                 overflow: hidden;
+                 word-break: break-all;
+                 text-overflow: ellipsis;   
+                 display: -webkit-box;
+                 -webkit-line-clamp: 2;
+                 -webkit-box-orient: vertical;
+            }
+            div.process img{
+                float: left;
+            }
+            div.process p.p1{
+                line-height: 30px;
+                width: 900px;
+                margin-left: 30px;
+            }
+            div.process p.p2{
+                background: url("lishi02.pg.jpg") no-repeat center/cover;
+                width: 400px;
+                height: 200px;
+                position: absolute;
+                top: 70px;
+                left: 960px;
+            }
+            div.mate{
+                 margin-left: 20px;
+                 position: relative;
+                 width: 100%;
+                 height: 350px;
+                 border-bottom: 2px solid rgb(216, 40, 16);
+            }
+            div.mate img{
+                float: left;
+            }
+            div.mate ul li{
+                float: left;
+                width: 200px;
+                height: 270px;
+                margin-left: 50px;
+            }
+            div.mate ul li img{
+                width: 200px;
+                height: 250px;
+            }
+            div.end{
+                margin-left: 20px;
+                position: relative;
+                width: 100%;
+                height: 180px;
+                background: rgb(216, 40, 16);
+            }
+            div.end ul{
+                position: absolute;
+                top: 40%;
+                left: 35%;
+            }
+            div.end ul li{
+                list-style: none;
+                color: white;
+                font-size: 16px;
+            }
+    </style>
+    </head>
+    <body>
+        <div class="head">
+            <a href="https://www.ncwu.edu.cn/index.htm"><img src="logo_03.jpg" alt=""></a>
+           <div class="part">
+            <a class="a1" href=""><img src="weixin.png" alt=""> </a>
+            <a class="a2" href=""><img src="qq.png" alt=""> </a>
+            <a class="a3" href=""><img src="douyin.png" alt=""></a>
+            <a href="https://www.ncwu.edu.cn/index.htm">华水主页</a>
+            <div class="son"></div>
+           </div>
+        </div>
+        <ul class="ul1" style="font-size: 16px;">
+            <li><a href="index.html">主页</a> </li>
+            <li><a href="introduce.html">学校介绍</a> </li>
+            <li><a href="inform.html">通知公告</a> </li>
+            <li><a href="process.html">办学历程</a> </li>
+            <li><a href="mate.html">优秀校友</a> </li>
+        </ul>
+            <ul class="ul2">
+                <li><a class="a1"></a>学校介绍<a class="a2"></a></li>
+                <li><a class="a1"></a>通知公告<a class="a2"></a></li>
+                <li><a class="a1"></a>办学历程<a class="a2"></a></li>
+                <li><a class="a1"></a>优秀校友<a class="a2"></a></li>
+            </ul>
+            <div id="slidershow" class="carousel slide" data-ride="carousel">
+                <!-- 设置图片轮播的顺序 -->
+                <ol class="carousel-indicators">
+                    <li class="active" data-target="#slidershow" data-slide-to="0"></li>
+                    <li data-target="#slidershow" data-slide-to="1"></li>
+                    <li data-target="#slidershow" data-slide-to="2"></li>
+                </ol>
+                <!-- 设置轮播图片 -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <a href="##"><img src="1.jpg" alt=""></a>
+                        <!-- 图片对应标题和描述内容 -->
+                        <div class="carousel-caption">
+                            <h3>华水生日快乐</h3>
+                            <p>恭迎华北水利水电大学建校70周年</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a href="##"><img src="2.jpg" alt=""></a>
+                        <!-- 图片对应标题和描述内容 -->
+                        <div class="carousel-caption">
+                            <h3>美丽华水</h3>
+                            <p>华水风光</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a href="##"><img src="3.jpg" alt="" style="height: 500px;width: 1500px;"></a>
+                        <!-- 图片对应标题和描述内容 -->
+                        <div class="carousel-caption">
+                            <h3>美丽华水</h3>
+                            <p>华水风光</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 设置轮播图片控制器 -->
+                <a class="left carousel-control" href="#slidershow" role="button" data-slide="prev" >
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#slidershow" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+                </div>
+                <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+               <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+            <div class="content">
+                <img src="xiaoqing.png" alt=""><a href="introduce.html" style="color: black;text-decoration: none;"><h2>学校介绍</h2></a>
+               <div class="part1">
+                   <img src="xiaohui.jpg" alt="" width="100px" height="100px">
+                   <h3 style="display: block; margin-left: 10px;margin-top: 10px;">华北水利水电大学</h3>
+                   <p>华北水利水电大学（North China University of Water Resources and Electric Power），简称“华水”，坐落于河南省郑州市，是水利部与河南省共建、以河南省管理为主的河南省特色骨干大学，是金砖国家网络大学中方高校牵头单位、金砖国家大学联盟成员，为国家首批硕士学位、博士学位授予权单位，入选教育部卓越工程师教育培养计划、中西部高校基础能力建设工程、硕士研究生单独招考资格、少数民族高层次骨干人才计划，水利部水务培训中心、水利部电大开放教育办公室设在学校。
+                    学校起源自1951年创建于北京的中央人民政府水利部水利学校，1954年更名为水利部北京水利学校。1958年北京水力发电学校、北京水力发电函授学院并入，成立北京水利水电学院。1969年迁至河北省磁县岳城水库办学，1971年更名为河北水利水电学院，1977年迁至河北省邯郸市办学，1978年更名为华北水利水电学院，1990年迁至河南省郑州市办学，2000年整建制由水利部划转河南省管理，2013年更名为华北水利水电大学。
+                    截至2021年6月，建有花园校区(占地面积555亩)、龙子湖校区(占地面积1780亩)，江淮校区（占地面积1500亩），设有24个教学单位，有65个本科专业，4个博士学位授权一级学科，38个硕士学位授权一级学科；有教职工2500余人，全日制在校生32182人（含预科43人），其中本科生29602人，全日制硕士博士研究生2393人。</p>
+               </div>
+               <form action="">
+                <p >用户名 <input type="text" name="name" placeholder="请输入英文字母或数字"></p>
+                <p style="margin-left: 16px;">密码 <input type="password" name="" placeholder="******"></p>
+                <p style="margin-left: -14px;">确认密码 <input type="password" name="" placeholder="******"></p>
+                <p style="margin-left: 10px;">email <input type="email" name="" placeholder="123456789@qq.com"></p>
+                <p style="margin-left: 18px;">昵称 <input  name="name" placeholder="输入英文字母或者数字"></p>
+                 <input type="button" style="margin-left: 50px;margin-right: 20px; background-color: #3C6CB1;width: 80px;height: 30px;color: white;" value="注册">
+                 <input type="button" style="background-color: #3C6CB1;width: 140px;height: 30px;color: white;" value="我有账号，我要登录">
+               </form>
+            </div>
+            <div class="inform">
+                <div>
+                    <img src="xiaoqing.png" alt=""><a class="a1" href="" style="color: black;text-decoration: none;"><h2>通知公告</h2></a>
+                    <a href="" style="color: black;font-size: 18px;">校庆新闻</a>
+                    <a href="" style="color: black;font-size: 18px;">校庆长廊</a>
+                    <a href="" style="color: black;font-size: 18px;">关于召开校庆工作汇报会的通知</a>
+                    <a href="" style="color: black;font-size: 18px;">校友风采</a>
+                    <a href="" style="color: black;font-size: 18px;">校园风光</a>
+                </div>
+                <div class="div2">
+                    <a href="" style="color: black;font-size: 18px;">许愿墙</a>
+                    <a href="" style="color: black;font-size: 18px;">公告</a>
+                    <a href="" style="color: black;font-size: 18px;">宫格</a>
+                    <a href="" style="color: black;font-size: 18px;">华北水利水电大学捐赠简介</a>
+                    <a href="" style="color: black;font-size: 18px;">华北水利水电大学70周年校庆公告（第一号）</a>
+                </div>
+            </div>
+            <div class="process">
+                <img src="xiaoqing.png" alt=""><a href="" style="color: black;text-decoration: none;"><h2>建校历程</h2></a>
+                <p class="p1">北京时期
+                    张子林院长受到毛泽东主席接见
+                    张子林院长受到毛泽东主席接见
+                    新中国成立初期，由当时的水利部部长傅作义于1951年主持创建了学校的前身—水利部北京水利学校。
+                    1951年9月15日，中央人民政府水利部在北京创办的水利部水利学校正式开学，校址设在阜城门内巡捕厅十号（今民康胡同）。
+                    1953年9月，北京水利学校迁入北京市西郊花园村新建校舍(原华北水利水电学院北京研究生部所在地)。
+                    1954年，学校改名为北京水利学校。
+                    1958年10月6日，北京水利学校与北京水利发电函授学院、北京水力发电学校合建北京水利水电学院，在北京市东郊定福庄举行成立大会。院长由北京水利水电科学研究院院长张子林兼任。10月6日确定为校庆日。
+                    1958年起，先后接受越南、尼泊尔、印度尼西亚、喀麦隆等国留学生（1966年停止，2004年恢复）。
+                    1959年7月23日，北京水利水电学院一部收归水利电力部直接领导，恢复北京水力发电学校。
+                    1960年，学校水利电力部委托负责援建越南水利水电学院。
+                    1963年，哈尔滨建筑工程学院（后更名哈尔滨建筑大学，已并入哈尔滨工业大学）河川枢纽及水电站建筑专业合并到该校，同年开始招收研究生。
+                    1966年4月，周恩来总理来河北地震地区视察，座谈时了解到华北缺乏水利人才，于是提出了将北京水利水电学院从北京迁至邯郸的建议。5月30日，水利电力部致河北省委、省革委将北京水利水电学院迁往河北省邯郸市磁县岳城水库工...
+                </p>
+                <p class="p2"></p>
+            </div>
+            <div class="mate">
+                <img src="xiaoqing.png" alt=""><a href="" style="color: black;text-decoration: none;"><h2>优秀校友</h2></a>
+                <ul>
+                    <li><img src="cl.jpg" alt=""><a href="" style="color: black;text-decoration: none;">陈雷</a></li>
+                    <li><img src="lcx.jpg" alt=""><a href="" style="color: black;text-decoration: none;">刘慈欣</a></li>
+                    <li><img src="mrp.jpg" alt=""><a href="" style="color: black;text-decoration: none;">孟瑞鹏</a></li>
+                    <li><img src="ejp.png" alt=""><a href="" style="color: black;text-decoration: none;">鄂竟平</a></li>
+                    <li><img src="lgy.jpg" alt=""><a href="" style="color: black;text-decoration: none;">李国英</a></li>
+                </ul>
+            </div>
+            <div class="end">
+              <img src="symbol.png" alt="">
+              <ul>
+                  <li>网页作者：201917328靳和颜</li>
+                  <li>花园校区地址：河南省郑州市北环路36号 邮编：450045</li>
+                  <li>龙子湖校区地址：河南省郑州市金水东路136号 邮编：450046</li>
+              </ul>
+            </div>
+    </body>
+</html>
